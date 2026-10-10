@@ -1,0 +1,51 @@
+name: Reporte de bug
+description: Reporta un comportamiento incorrecto en un sistema de MinKura
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar. No incluyas credenciales, tokens ni datos personales.
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema afectado
+      description: Nombre del sistema o repositorio (según el catálogo)
+      placeholder: pkg-political-knowledge-graph
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del problema
+      description: ¿Qué ocurrió y qué esperabas que ocurriera?
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia (logs, capturas, enlaces)
+    validations:
+      required: false
+  - type: dropdown
+    id: entorno
+    attributes:
+      label: Entorno
+      options:
+        - local
+        - dev (mini-servidor)
+        - staging (Alibaba)
+        - prod (Alibaba)
+        - no aplica / no sé
+    validations:
+      required: true

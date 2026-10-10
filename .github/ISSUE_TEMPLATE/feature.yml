@@ -1,0 +1,31 @@
+name: Solicitud de funcionalidad
+description: Propón una mejora o funcionalidad nueva
+title: "[feature] "
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema o necesidad
+      description: ¿Qué problema resuelve esta propuesta?
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: ¿Cómo imaginas la solución?
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
+  - type: input
+    id: sistema
+    attributes:
+      label: Sistema relacionado (si aplica)
+      placeholder: repo o sistema del catálogo
+    validations:
+      required: false
